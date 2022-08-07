@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02C23DC628A036B500BC68F2 /* ComidasBD.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 02C23DC528A036B500BC68F2 /* ComidasBD.sqlite */; };
 		52BA276144F47604A487B5EE /* Pods_ProyectoG104.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20FECF4A3019D1E6EF68F27 /* Pods_ProyectoG104.framework */; };
 		E9E57EB728921B9F00DFC725 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E57EB628921B9F00DFC725 /* MenuViewController.swift */; };
 		E9E57EC02892265600DFC725 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E57EBF2892265600DFC725 /* MenuTableViewCell.swift */; };
@@ -15,7 +16,6 @@
 		E9E57ECD2898A5CD00DFC725 /* DetalleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E57ECC2898A5CD00DFC725 /* DetalleTableViewController.swift */; };
 		E9E57ED22898BEF300DFC725 /* PedidosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E57ED02898BEF300DFC725 /* PedidosViewController.swift */; };
 		E9E57ED32898BEF300DFC725 /* PedidoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E57ED12898BEF300DFC725 /* PedidoTableViewCell.swift */; };
-		E9E57ED52898CC4D00DFC725 /* ComidasBD.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E9E57ED42898CC4D00DFC725 /* ComidasBD.sqlite */; };
 		E9E57ED8289A1EE400DFC725 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E57ED7289A1EE400DFC725 /* DataBase.m */; };
 		E9EDB44128920CD9005D85E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB44028920CD9005D85E3 /* AppDelegate.swift */; };
 		E9EDB44328920CD9005D85E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB44228920CD9005D85E3 /* SceneDelegate.swift */; };
@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02C23DC528A036B500BC68F2 /* ComidasBD.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ComidasBD.sqlite; sourceTree = "<group>"; };
 		2EF047BF423BAD76D4226B6B /* Pods-ProyectoG104.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoG104.release.xcconfig"; path = "Target Support Files/Pods-ProyectoG104/Pods-ProyectoG104.release.xcconfig"; sourceTree = "<group>"; };
 		3C80FAA9C76571F6464C8CC7 /* Pods-ProyectoG104.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoG104.debug.xcconfig"; path = "Target Support Files/Pods-ProyectoG104/Pods-ProyectoG104.debug.xcconfig"; sourceTree = "<group>"; };
 		E20FECF4A3019D1E6EF68F27 /* Pods_ProyectoG104.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoG104.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +38,6 @@
 		E9E57ECC2898A5CD00DFC725 /* DetalleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTableViewController.swift; sourceTree = "<group>"; };
 		E9E57ED02898BEF300DFC725 /* PedidosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidosViewController.swift; sourceTree = "<group>"; };
 		E9E57ED12898BEF300DFC725 /* PedidoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoTableViewCell.swift; sourceTree = "<group>"; };
-		E9E57ED42898CC4D00DFC725 /* ComidasBD.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = ComidasBD.sqlite; sourceTree = "<group>"; };
 		E9E57ED6289A1EE400DFC725 /* DataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
 		E9E57ED7289A1EE400DFC725 /* DataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBase.m; sourceTree = "<group>"; };
 		E9EDB43D28920CD9005D85E3 /* ProyectoG104.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoG104.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,9 +82,9 @@
 		E9E57EB828921E4200DFC725 /* repositorio */ = {
 			isa = PBXGroup;
 			children = (
+				02C23DC528A036B500BC68F2 /* ComidasBD.sqlite */,
 				E9E57ED6289A1EE400DFC725 /* DataBase.h */,
 				E9E57ED7289A1EE400DFC725 /* DataBase.m */,
-				E9E57ED42898CC4D00DFC725 /* ComidasBD.sqlite */,
 				E9E57EB928921E9400DFC725 /* ProyectoG104-Bridging-Header.h */,
 			);
 			path = repositorio;
@@ -241,8 +241,8 @@
 			files = (
 				E9EDB44D28920CDB005D85E3 /* LaunchScreen.storyboard in Resources */,
 				E9EDB44A28920CDB005D85E3 /* Assets.xcassets in Resources */,
+				02C23DC628A036B500BC68F2 /* ComidasBD.sqlite in Resources */,
 				E9EDB44828920CD9005D85E3 /* Main.storyboard in Resources */,
-				E9E57ED52898CC4D00DFC725 /* ComidasBD.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

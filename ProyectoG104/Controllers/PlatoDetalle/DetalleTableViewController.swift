@@ -60,7 +60,7 @@ class DetalleTableViewController: UITableViewController {
             cantidad += 1
         }
         cantidadLbl.text = "\(cantidad)"
-        print("cantidad:",cantidad)
+//        print("cantidad:",cantidad)
     }
     
     @IBAction func agregandoPreferidos(_ sender: Any) {
@@ -70,7 +70,7 @@ class DetalleTableViewController: UITableViewController {
         let altoScreen = UIScreen.main.bounds.height
         
         fondoBlur.frame = CGRect(x: 0, y: 0, width: anchoScreen, height: altoScreen)
-        fondoBlur.alpha = 0.5
+        fondoBlur.alpha = 0.8
         self.tableView.addSubview(fondoBlur)
         
         print("ancho,alto:",anchoScreen,altoScreen)
@@ -89,7 +89,7 @@ class DetalleTableViewController: UITableViewController {
       
         
         let queryInsert = "INSERT INTO pedidos (plato_id, plato_nombre, cantidad, plato_precio) VALUES ('\(platoId)', '\(nombrePlato)', '\(cantidad)', '\(platoPrecio)')"
-//        DataBase.shared().ejecutarInsert(queryInsert)
+        DataBase.shared().ejecutarInsert(queryInsert)
         performSegue(withIdentifier: "seguePedidos", sender: nil)
     }
     
