@@ -16,8 +16,8 @@ class PedidosViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     func cargarDatosPedidos(){
-        
-        
+        let query = "select * from pedidos"
+        arrayPedidos  =  DataBase.shared().ejecutarSelect(query) as! [[String:String]]
     }
     override func viewWillAppear(_ animated: Bool) {
         let token = KeychainSwift().get("tokenRec")
@@ -35,30 +35,36 @@ class PedidosViewController: UIViewController {
         }else{
             performSegue(withIdentifier: "toLogin", sender: self)
         }
-        
     }
-    
 }
+
 // MARK: - UITableViewDataSource
 extension PedidosViewController: UITableViewDataSource,UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
-    func tableView(_ tableView: UITableView,
-                   numberOfRowsInSection section: Int) -> Int {
-        
-        return 0
+        return 1
     }
     
-    func tableView(_ tableView: UITableView,
-                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayPedidos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCell(withIdentifier:"PedidoTableViewCell", for: indexPath)
         let pedidoCell = cell as! PedidoTableViewCell
         
-//        let detalle = D
-//        pedidoCell.detalle = detalle
+        //datos
+        let objPlato = arrayPedidos[indexPath.row]
+        let plato_nombre = objPlato["plato_nombre"]
+        let cantidad = objPlato["cantidad"]
+        let plato_precio = objPlato["plato_precio"]
+        let totalPlato = ((Float(cantidad ?? "0") ?? 0)) * (Float(plato_precio ?? "0") ?? 0)
+        
+//        cell.textLabel?.text = nombre
+        pedidoCell.cantidadLabel.text = cantidad
+        pedidoCell.platoLabel.text = plato_nombre
+        pedidoCell.precioUnitarioLabel.text =  plato_precio
+        pedidoCell.precioTotalLabel.text = String(format: "%.2f", totalPlato )
         
         return pedidoCell
     }

@@ -28,7 +28,7 @@ class DetalleTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //recuperar el id desde el objeto
-        print("plato:",paramObjetoPlato)
+//        print("plato:",paramObjetoPlato)
        
         //se consulta a la base de datos para traer los datos del plato
         mostrandoDatos()
@@ -46,6 +46,8 @@ class DetalleTableViewController: UITableViewController {
         nombreDetalle.text =  nombrePlato
         let descripcion = plato["descripcion_plato"]
         descripcionDetalle.text = descripcion
+        let precioPlato = plato["precio_plato"]
+        precionDetalle.text = precioPlato
     }
     @IBAction func logicaCantidad(_ sender: Any) {
         let btn = sender as! UIButton
